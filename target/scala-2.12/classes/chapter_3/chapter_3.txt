@@ -1,0 +1,32 @@
+Chapter 3: Next Steps In Scala
+- you can parameterize your object instances like you would in any other language
+- while type parameterization portion forms part of the type of instance, value parameterization does not
+
+-when defining a variable val, the variable can't be reassigned but the object to which it refers
+    to still can potentially be changed
+-i.e val greetings = new Array[String](3) //can still have array values be mutated
+
+-methods with only one argument can be called without a dot or parentheses
+- i.e. (0).to(2) == 0 to 2
+- scala also does not have operator overload since operators are really functions
+
+-When applying parentheses surrounding one or more values to a variable, Scala will transform the code into
+    an invocation of the apply() method
+    --i.e. array1(0) == array1.apply(0)
+-Similarly when as assignment is made to a variable to which parentheses and one or more have been applied, the
+    compiler will transform to update() method
+    --i.e. array(1) = "HELLO" == array.update(1, "HELLO")
+
+
+
+--USE Lists
+    - immutable sequence of objects that share same type
+    - creating list in Scala is very easy i.e. val oneTwoThree = List(1,2,3)
+    - Lists in scala are immutable, so any function applied simply returns a new list
+    - `::` cons operator prepends a new element to the beginning of an existing list
+        -- '::' is a method of its right operand, meaning 0::oneTwoThree == oneTwoThree.::(0)
+    - append is not commonly used with Scala's list class since it's a linked list and appending
+        is an O(n) function, while `::` takes constant time
+    - efficient way to append to a list is to prepend and then call reverse or use a ListBuffer
+
+

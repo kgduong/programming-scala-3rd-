@@ -1,0 +1,7 @@
+Chapter 2: First Steps In Scala
+
+-Packages in Scala are similar to packages in Java, they partition the global namespace and provide a mechanism for information hiding
+-Explicit type annotation ensure the Scala compiler infers the type you intend and serves as great documentation
+
+--imperative style => style normally used in C# and Java, where you give one imperative command at a time
+    iterate with loops and often mutate state shared between different functions

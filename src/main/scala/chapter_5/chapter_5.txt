@@ -1,0 +1,5 @@
+Chapter 5: Types in Scala
+    - majority of types are similar to Java types
+    - Integral types and numeric types
+    - Besides string which is a member of Java, all other types are members of scala class
+    - Because Scala's basic types have same range as Java types, Scala value types can be compiled into Java primitive byte code

@@ -1,0 +1,5 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mElementSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mA UniformElement[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should have a width equal to the passed value[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should have a height equal to the passed value[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should throw an IAE if passed a negative width[0m[0m
