@@ -59,7 +59,7 @@ abstract class BasicCircuitSimulation extends Simulation{
     def orAction() = {
       val o1Sig = o1.getSignal
       val o2Sig = o2.getSignal
-      afterdelay(OrGateDelay){
+      afterDelay(OrGateDelay){
         output setSignal(o1Sig | o2Sig)
       }
     }
@@ -69,7 +69,7 @@ abstract class BasicCircuitSimulation extends Simulation{
 
   //Probe is used to inspect changes of signal on wires
   //The probe action is executed every time the wire's signal changes
-  def probe(name: String, wire: String) = {
+  def probe(name: String, wire: Wire) = {
     def probeAction() = {
       println(name + " " + currentTime + " new-value = " + wire.getSignal)
     }
