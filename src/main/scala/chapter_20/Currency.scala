@@ -17,8 +17,8 @@ abstract class AbstractCurrency{
   val amount: Long
   def designation: String
   override def toString = amount + " " + designation
-  def + (that: Currency): Currency = this
-  def * (that: Currency): Currency = this
+  def + (that: this.Currency): this.Currency = that
+  def * (that: this.Currency): this.Currency = that
 
   //we can use a make factory method to create Currency we need
   def make(amount: Long): Currency //factory method
@@ -30,7 +30,7 @@ object Converter{
   var exchangeRate = Map(
     "USD" -> Map( "USD" -> 1.0,
                   "EUR" -> 0.7596,
-                  "JPY" -> 1,211,
+                  "JPY" -> 1.211,
                   "CHF" -> 1.223),
     "EUR" -> Map( "USD" -> 1.316,
                   "EUR" -> 1.0,
