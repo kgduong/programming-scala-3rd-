@@ -6,11 +6,11 @@ class Views {
   //  - lazy transformer constructs a proxy for result collection, elements are constructed on demand
 
   //Example of lazy transformer
-  def lazyMap[T, U](coll: Iterable[T], f: T => U) =
-    //constructs a new Iterable without stepping through all elements of coll
-    new Iterable[U]{
-      def iterator = coll.iterator map f //calculates new elements on demand
-    }
+//  def lazyMap[T, U](coll: Iterable[T], f: T => U) =
+//    //constructs a new Iterable without stepping through all elements of coll
+//    new Iterable[U]{
+//      def iterator = coll.iterator.map(f(_)) //calculates new elements on demand
+//    }
 
   //Views is  a special collection that represent a base collection, but implements all transformations lazily
   val v = Vector(1 to 10: _*)
@@ -32,7 +32,7 @@ class Views {
   //  - Can selectively update sequence elements of a mutable collection
 
   def isPalindrome(x: String) = x == x.reverse
-  def findPalindrome(s: Seq[String]) = s find isPalindrome()
+  def findPalindrome(s: Seq[String]) = s find(x => isPalindrome(x))
   //example of findPalindrome(words take 1000000), where words is a large collection of strings
   //  - an intermediate sequence of a million words is always constructed, even if first word is palindrome
   //  - using views, a single lightweight view is constructed instead of a million element sequence
