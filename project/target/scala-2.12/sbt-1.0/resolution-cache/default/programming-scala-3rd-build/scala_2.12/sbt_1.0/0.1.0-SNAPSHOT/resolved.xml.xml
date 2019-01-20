@@ -4,7 +4,7 @@
 		module="programming-scala-3rd-build"
 		revision="0.1.0-SNAPSHOT"
 		status="integration"
-		publication="20181117160719"
+		publication="20190113184018"
 		e:sbtVersion="1.0" e:scalaVersion="2.12"
 	>
 		<description>
