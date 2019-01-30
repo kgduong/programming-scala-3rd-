@@ -4,7 +4,7 @@
 		module="programming-scala-3rd_2.12"
 		revision="0.1"
 		status="integration"
-		publication="20181117160635"
+		publication="20190128164228"
 	>
 		<description>
 		programming-scala-3rd
@@ -33,5 +33,6 @@
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.12.7" conf="scala-tool->default,optional(default)"/>
 		<dependency org="org.scala-lang" name="scala-library" rev="2.12.7" conf="scala-tool->default,optional(default);compile->default(compile)"/>
 		<dependency org="org.scalatest" name="scalatest_2.12" rev="3.2.0-SNAP9" conf="test->default(compile)"/>
+		<dependency org="org.scala-lang.modules" name="scala-xml_2.12" rev="1.1.1" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>
